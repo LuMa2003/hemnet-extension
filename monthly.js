@@ -14,10 +14,8 @@ let rent = parseInt(costinfo[0].lastChild.innerHTML.replaceAll("&nbsp;", ""))
 
 let utilities = parseInt(costinfo[1].lastChild.innerHTML.replaceAll("&nbsp;", ""))
 
-console.log(listingprice)
-console.log(rent)
-console.log(utilities)
+let loanamount = listingprice - (listingprice * 0.15)
 
 costinfo[3].firstChild.innerHTML = "Månadskostnad"
 
-costinfo[3].lastChild.innerHTML = new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumSignificantDigits: 5 }).format((listingprice*0.047/12) + (listingprice*0.02/12) +  rent + (utilities/12)) + "/mån"
+costinfo[3].lastChild.innerHTML = new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', maximumSignificantDigits: 4 }).format((loanamount*0.047/12) + (loanamount*0.02/12) +  rent + (utilities/12)) + "/mån"
