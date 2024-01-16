@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Hemnet extension",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Calculates the monthly cost for apartments on hemnet. ",
     "icons": {
         "48": "hemnet.png"
